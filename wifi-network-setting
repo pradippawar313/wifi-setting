@@ -1,0 +1,6 @@
+sudo lshw -class network 
+cd /etc/pm/sleep.d
+sudo touch config 
+SUSPEND_MODULES="RTL8821CE"
+echo "options  RTL8821CE fwlps=N" | sudo tee /etc/modprobe.d/RTL8821CE.conf 
+reboot
